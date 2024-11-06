@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Portfolio</title> 
+  <link rel="stylesheet" href="styles.css"> 
+ <style type="text/css" id="dcoder_stylesheet">/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body Styling */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #121212;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    color: #ff4b4b; /* Red color from profile */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    padding: 10px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff4b4b; /* Red hover effect */
+    background-color: #333;
+}
+
+/* Main Section (Profile Page) */
+.main {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 100px 50px 50px;
+    margin-top: 60px; /* Adjust for fixed header */
+    background-color: #121212; /* Keeping the dark background */
+}
+
+.profile img {
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid #ff4b4b; /* Red border around the image */
+}
+
+/* Content */
+.content h2 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.content h2 span {
+    color: #ff4b4b; /* Red text accent */
+}
+
+.content h3 {
+    font-size: 28px;
+    color: #ff4b4b; /* Red color */
+    margin-bottom: 15px;
+}
+
+.content p {
+    color: #ffffff;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: #ff4b4b;
+    font-size: 24px;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff4b4b; /* Red hover effect */
+}
+
+/* Button */
+.download-cv {
+    padding: 10px 20px;
+    background-color: #ff4b4b; /* Red background */
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.download-cv:hover {
+    background-color: #e63939; /* Darker red for hover */
+}
+
+/* Section Styles */
+.section {
+    width: 100%;
+    padding: 80px 50px;
+    color: #ff4b4b;
+    text-align: center;
+    margin-top: 100px; /* Adjust for fixed header */
+    border-radius: 10px;
+    background-color: #121212; /* Keeping consistent dark background */
+}
+
+/* Each section gets a distinct red variation */
+#home {
+    background-color: #121212; /* Keeping the same dark background for home */
+}
+
+#about {
+    background-color: #1a1a1a; /* Darker shade for About section */
+    color: #ffffff; /* Set paragraph text color to white */
+}
+
+#about h2 {
+    color: #ff4b4b; /* Set "ABOUT ME" heading color to red */
+}
+
+#skills {
+    background-color: #1a1a1a; /* Slightly lighter shade for Skills section */
+    color: #ffffff; /* Set paragraph text color to white */
+}
+
+#skills h2 {
+    color: #ff4b4b; /* Set "SKILLS" heading color to red */
+}
+
+#service {
+    background-color: #1a1a1a; /* Even lighter shade for Service section */
+    color: #ffffff; /* Set paragraph text color to white */
+}
+
+#service h2 {
+    color: #ff4b4b; /* Set "SERVICE" heading color to red */
+}
+
+#contact {
+    background-color: #1a1a1a; /* A neutral dark gray for Contact */
+    color: #ffffff; /* Set paragraph text color to white */
+}
+
+#contact h2 {
+    color: #ff4b4b; /* Set "CONTACT" heading color to red */
+}
+
+/* Section Heading Styles */
+h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+h2 span {
+    color: #ff4b4b; /* Red accent */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile img {
+        width: 200px;
+    }
+
+    .content h2 {
+        font-size: 28px;
+    }
+
+    .content h3 {
+        font-size: 24px;
+    }
+
+    .content p {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .content h2 {
+        font-size: 24px;
+    }
+
+    .content h3 {
+        font-size: 20px;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+        margin-right: 10px;
+    }
+
+    .download-cv {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px;
+    text-align: center;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.social-btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px; /* Smaller font size */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.linkedin { background-color: #0077b5; }
+.instagram { background-color: #e4405f; }
+.facebook { background-color: #3b5998; }
+.tiktok { background-color: #000000; }
+
+.social-btn:hover {
+    opacity: 0.8;
+}
+
+/* Contact Form */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#contact-form label {
+    font-size: 16px;
+    color: #ff4b4b;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #222222;
+    color: #ffffff;
+}
+
+#contact-form button {
+    padding: 15px 25px;
+    background-color: #ff4b4b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #e63939;
+}</style></head> 
+ <body> <!-- Navigation --> 
+  <header> 
+   <h1 class="logo">Portfolio.</h1> 
+   <nav> 
+    <ul> 
+     <li><a href="#home">Home</a></li> 
+     <li><a href="#about">About</a></li> 
+     <li><a href="#skills">Skills</a></li> 
+     <li><a href="#service">Service</a></li> 
+     <li><a href="#contact">Contact</a></li> 
+    </ul> 
+   </nav> 
+  </header> <!-- Home Section --> 
+  <section id="home" class="section"> 
+   <div class="main"> 
+    <div class="profile"> 
+     <img src="https://i.imgur.com/nF7oKV3.jpeg" alt="Profile Picture"> 
+    </div> 
+    <div class="content"> 
+     <h2>Hey, I'm <span>Hanadi</span></h2> 
+     <h3>I'm a <span class="highlight">Programmer</span></h3> 
+     <p>Pain itself, is sitting here, and it's a true thing. It happens, easily! Anyone can be blamed.</p> 
+     <div class="social-icons"> <a href="#"><i class="fab fa-linkedin"></i></a> <a href="#"><i class="fab fa-github"></i></a> <a href="#"><i class="fab fa-facebook"></i></a> <a href="#"><i class="fab fa-twitter"></i></a> 
+     </div> <button class="download-cv">Download CV</button> 
+    </div> 
+   </div> 
+  </section> <!-- About Section --> 
+  <section id="about" class="section"> 
+   <h2>About Me</h2> 
+   <p>I am Hanadi, a web developer passionate about building clean, user-friendly websites. I specialize in both front-end and back-end development, and I'm always eager to learn new skills and technologies. My goal is to create solutions that make a real impact.</p> 
+  </section> <!-- Skills Section --> 
+  <section id="skills" class="section"> 
+   <h2>Skills</h2> 
+   <p>I work with HTML, CSS, JavaScript, React, Node.js, and databases like MySQL and MongoDB. Whether it’s building responsive designs or dynamic web apps, I’m skilled at creating websites that are both functional and visually appealing.</p> 
+  </section> <!-- Service Section --> 
+  <section id="service" class="section"> 
+   <h2>Services</h2> 
+   <p>I offer web development services, from simple websites to full-scale web apps. Whether you need a portfolio, e-commerce site, or custom solution, I’ll help you bring your vision to life with a focus on performance and design.</p> 
+  </section> <!-- Contact Section --> 
+  <section id="contact" class="section"> 
+   <h2>Contact Me</h2> 
+   <p>If you have any questions or want to connect, feel free to send me a message or follow me on social media!</p> <!-- Social Media Links --> 
+   <div class="social-links"> <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="social-btn linkedin">LinkedIn</a> <a href="https://www.instagram.com/your-profile" target="_blank" class="social-btn instagram">Instagram</a> <a href="https://www.facebook.com/your-profile" target="_blank" class="social-btn facebook">Facebook</a> <a href="https://www.tiktok.com/@your-profile" target="_blank" class="social-btn tiktok">TikTok</a> 
+   </div> <!-- Contact Form --> 
+   <form id="contact-form"> <label for="name">Your Name</label> 
+    <input type="text" id="name" name="name" placeholder="Enter your name" required> <label for="email">Your Email</label> 
+    <input type="email" id="email" name="email" placeholder="Enter your email" required> <label for="message">Your Message</label> <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea> <button type="submit">Send Message</button> 
+   </form> 
+  </section> 
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> 
+ 
+</body></html>
